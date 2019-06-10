@@ -1,7 +1,6 @@
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif "Trained Agent"
-[image2]: https://user-images.githubusercontent.com/10624937/43851646-d899bf20-9b00-11e8-858c-29b5c2c94ccc.png "Crawler"
+[image1]: https://github.com/MarkusSchmitz/DRLND_Continuoues_Control/blob/master/reacher.gif?raw=true "Trained Agent"
 
 
 # Project 2: Continuous Control
@@ -54,10 +53,18 @@ In order to replicate the environent, follow these steps:
 	```
 3. Download the `Reacher` environment from one of the links below and select the environment that matches your Windows operating system:
     - **_Version 1: One (1) Agent_**
-        - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
-        - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
+### Version 1: One (1) Agent
+	Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
+	Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip
+	Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
+	Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
+### Version 2: Twenty (20) Agents
+	Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
+	Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
+	Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
+	Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
  
-4. Place the file in the `continuous_control/` folder, and unzip (or decompress) the file.
+4. Place the file in the uncompressed folder inside the `DRLND_Continuoues_Control/` folder.
 
 ### Train the agent 
-Execute  the cells within `Continuous_Control.ipynb` in order to initialize the environment with making necessary adjustments for the path to the UnityEnvironment in the code, initialize the agent, and perform the training of a single agent.
+Use the `p2_Continuous_Control.ipynb` in order to train the agent. The weights of the target nets are also saved as checkpoints.
