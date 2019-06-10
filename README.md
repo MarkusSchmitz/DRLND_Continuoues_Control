@@ -12,40 +12,45 @@ For this project, the work will be with the [Reacher](https://github.com/Unity-T
 
 ![Trained Agent][image1]
 
-In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
+This environment contains a bi-jointed (robot) arm that can move around its base joint. Additionally each arm has a green sphere that circles around it in a constand distance, but with varying direction and velocity.The goal is for the agent to keep it's outer joint (blue sphere) inside of the green goal sphere. For every timestep the agent is inside the goal sphere, it is awareded 0.1 points, otherwise none. 
 
-The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+The state of the environment contains the position, velocity, rotation of the arm as well as the goal sphere. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
-The Benchmark Mean Reward is 30.
+In order to solve the environment, the agent must reach a average score of 30.
 
 ### Solving the Environment
 
 This project uses a Unity environment that contains a single agent. The task is episodic, and in order to solve the environment,  the agent must get an average score of +30 over 100 consecutive episodes.
 ```python
-env = UnityEnvironment(file_name='Reacher.exe')
+env = UnityEnvironment(file_name='Reacher.app')
 ```
 ### Instructions
-This project runs locally on Windows 10 environment. Here are the steps to setup the environment:
-1. Create (and activate) a new environment with Python 3.6.
-	```
-	- __Windows__: 
+This ample of the project was computed on a MacOS with no GPU Accelearation.
+In order to replicate the environent, follow these steps:
+
+1. Create a new environment with Python 3.6 with Anaconda.
 	```bash
 	conda create --name drlnd python=3.6 
 	activate drlnd
 	```
 
-2. Install these dependencies in the environment on windows 10
+2. Install the necessary dependencies in the environment with pip and conda:
 	- __Install Unity ML-Agents__
 	```bash
-	pip3 install --user mlagents
+	pip install --user mlagents, unityagents
 	```	
-	- __Install Unity Agents__
-	```bash
-	pip install unityagents
-	```	
+	```bash	
 	- __Install Pytorch__
+	conda install pytorch torchvision -c pytorch
+	
+	or
+
+	conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
+
+	```
+	- __Install tqdm__
 	```bash
-	conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
+	pip install tqdm
 	```
 3. Download the `Reacher` environment from one of the links below and select the environment that matches your Windows operating system:
     - **_Version 1: One (1) Agent_**
