@@ -1,5 +1,3 @@
-[//]: # (Image References)
-
 [image1]: https://github.com/MarkusSchmitz/DRLND_Continuoues_Control/blob/master/reacher.gif?raw=true "Trained Agent"
 
 

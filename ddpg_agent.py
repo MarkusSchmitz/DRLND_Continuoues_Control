@@ -67,13 +67,11 @@ class Agent():
             experiences = self.memory.sample()
             self.learn(experiences, GAMMA)
 
-        # Learn every UPDATE_EVERY time steps.
         # self.t_step = (self.t_step + 1) % UPDATE_EVERY
         
         #if self.t_step == 0:
             #if len(self.memory) > BATCH_SIZE:
-                # Learn, if enough samples are available in memory for number of timesteps
-                #for _ in range(UPDATE_NETWORK):
+                #for i in range(UPDATE_NETWORK):
                         #experiences = self.memory.sample()
                         #self.learn(experiences, GAMMA)
 
